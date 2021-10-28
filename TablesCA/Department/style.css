@@ -1,0 +1,63 @@
+body {
+    color: rgb(102, 101, 101);
+    font: 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+  }
+  table {
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+  }
+  h1{
+    text-align: center;
+  }
+  th,
+  td {
+    padding: 6px 15px;
+  }
+  th {
+    background: rgb(217, 221, 240);
+    color: rgb(83, 83, 83);
+    text-align: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+  }
+  img{
+    width: 5%;
+    height: 5%;
+    object-fit: scale-down;
+  }
+  tr:first-child th:first-child {
+    border-top-left-radius: 6px;
+   
+  }
+  tr:first-child th:last-child {
+    border-top-right-radius: 6px;
+  }
+  td {
+    border-right: 1px solid rgb(138, 154, 233);
+    border-bottom: 1px solid rgb(138, 154, 233);
+  }
+  td:first-child {
+    border-left: 1px solid rgb(217, 221, 240);
+  }
+  tr:nth-child(even) td {
+    background: rgb(217, 221, 240);
+  }
+  tr:last-child td:first-child {
+    border-bottom-left-radius: 6px;
+  }
+  tr:last-child td:last-child {
+    border-bottom-right-radius: 6px;
+  }
+  a:link{
+    color: #fff;
+  }
+  a:visited{
+    color: rgb(90, 90, 90);
+  }
+  a:hover{
+    color: rgb(2, 94, 94);
+  }
+ 
