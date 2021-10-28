@@ -19,7 +19,6 @@ body {
     background: rgb(215, 220, 245);
     color: rgb(133, 133, 133);
     text-align: center;
-    position: -webkit-sticky;
     position: sticky;
     top: 0px;
   }
@@ -32,7 +31,7 @@ body {
   }
   td {
     border-right: 1px solid rgb(215, 220, 245);
-    border-bottom: 1px solid rrgb(215, 220, 245);
+    border-bottom: 1px solid rgb(215, 220, 245);
   }
   td:first-child {
     border-left: 1px solid rgb(215, 220, 245);
