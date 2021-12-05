@@ -56,10 +56,10 @@
             </div>
             <div class="col-lg-2 order-1 mb-3 d-flex flex-column gap-2 mx-auto align-items-stretch">
                 <button name="3.1" class="btn btn-secondary btn-block" data-sql="SELECT * FROM employees WHERE hire_date = '1991-05-01';" onClick="reply_click(this)">3.1</button>
-                <button name="3.2" class="btn btn-secondary btn-block"data-sql="SELECT COUNT(emp_id) AS total FROM employees;" onClick="reply_click(this)">3.2</button>
-                <button name="3.3" class="btn btn-secondary btn-block"data-sql="SELECT * FROM employees WHERE gender = 'F' ; " onClick="reply_click(this)">3.3</button>
-                <button name="3.4" class="btn btn-secondary btn-block"data-sql="SELECT * FROM employees WHERE last_name = 'Simmel' AND hire_date < '1986-01-01';" onClick="reply_click(this)">3.4</button>
-                <button name="3.5" class="btn btn-secondary btn-block"data-sql="SELECT COUNT(last_name) AS total_with_B FROM employees WHERE last_name LIKE '%B%';" onClick="reply_click(this)">3.5</button>
+                <button name="3.2" class="btn btn-secondary btn-block"data-sql="SELECT emp_id, COUNT(title) AS total_emp FROM titles GROUP BY emp_id HAVING COUNT(title) >2 ;"  onClick="reply_click(this)">3.2</button>
+                <button name="3.3" class="btn btn-secondary btn-block"data-sql="SELECT COUNT(employees.emp_id) AS total_employees FROM employees INNER JOIN salaries ON employees.emp_id = salaries.emp_id WHERE to_date = '9999-01-01' AND salary > 90000 AND salary < 90040;" onClick="reply_click(this)">3.3</button>
+                <button name="3.4" class="btn btn-secondary btn-block"data-sql="SELECT DISTINCT last_name, first_name, salaries.salary, salaries.to_date FROM employees INNER JOIN salaries ON employees.emp_id = salaries.emp_id WHERE salaries.to_date = '9999-01-01' AND salaries.salary > 90000 ORDER BY last_name DESC, first_name DESC;" onClick="reply_click(this)">3.4</button>
+                <button name="3.5" class="btn btn-secondary btn-block"data-sql="" onClick="reply_click(this)">3.5</button>
                 
             </div>
             <div class="col-lg-10 order-2">
