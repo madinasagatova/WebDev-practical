@@ -1,13 +1,13 @@
 h1 {
 	text-align: center;
-	color: #222;
+	color: rgb(34, 34, 34);
 	margin: 0 0 30px;
 }
 
 .button {
-	color: #333;
+	color: rgb(38, 39, 38);
 	background: linear-gradient(#eee, #ddd);
-	border: 1px solid #222;
+	border: 1px solid rgb(12, 12, 12);
 	border-radius: 3px;
 	padding: 7px;
 	margin-right: 5px;
