@@ -56,8 +56,8 @@
             </div>
             <div class="col-lg-2 order-1 mb-3 d-flex flex-column gap-2 mx-auto align-items-stretch">
                 <button name="2.1" class="btn btn-secondary btn-block" data-sql="SELECT dept_name FROM departments" onClick="reply_click(this)">2.1</button>
-                <button name="2.2" class="btn btn-secondary btn-block"data-sql="SELECT emp_id, first_name, last_name FROM employees" onClick="reply_click(this)">2.2</button>
-                <button name="2.3" class="btn btn-secondary btn-block"data-sql="SELECT title from titles" onClick="reply_click(this)">2.3</button>
+                <button name="2.2" class="btn btn-secondary btn-block"data-sql="SELECT COUNT(emp_id) AS total FROM employees" onClick="reply_click(this)">2.2</button>
+                <button name="2.3" class="btn btn-secondary btn-block"data-sql="SELECT * FROM employees WHERE gender = 'F'  " onClick="reply_click(this)">2.3</button>
                 <button name="2.4" class="btn btn-secondary btn-block"data-sql="SELECT DISTINCT title from titles" onClick="reply_click(this)">2.4</button>
                 <button name="2.5" class="btn btn-secondary btn-block"data-sql="SELECT first_name, last_name FROM employees ORDER BY first_name ASC, last_name ASC" onClick="reply_click(this)">2.5</button>
                 <button name="2.6" class="btn btn-secondary btn-block"data-sql="SELECT first_name, last_name FROM employees ORDER BY first_name ASC, last_name ASC" onClick="reply_click(this)">2.6</button>
