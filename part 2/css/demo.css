@@ -1,7 +1,10 @@
 h1 {
+	color: #01922c; 
+	font-family: 'Droid serif', serif; 
+	font-size: 36px; font-weight: 400; 
+	font-style: italic; line-height: 44px; 
+	margin: 0 0 12px; 
 	text-align: center;
-	color: rgb(34, 34, 34);
-	margin: 0 0 30px;
 }
 
 .button {
