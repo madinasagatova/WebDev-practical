@@ -3085,7 +3085,7 @@ textarea.form-control-lg {
 .btn-secondary:disabled, .btn-secondary.disabled {
   color: #fff;
   background-color: #0b7901;
-  border-color: ##0b7901;
+  border-color: #0b7901;
 }
 
 .btn-success {
