@@ -30,9 +30,9 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Part 1</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Part 2</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Part 3</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="../part1.html">Part 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../part 2/part2.html">Part 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../part 3/part3.html">Part 3</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -51,41 +51,25 @@
           <div class="row">
             <div class="col-lg-12 text-center">
                 <h1>Data Manipulation and Validation (CA2)</h1>
-                <p class="lead">Part 1</p>
-                <p>Choose a query to execute</p>
+                <p class="lead">A complete project boilerplate built with Bootstrap</p>
+                <p>Part 2</p>
             </div>
             <div class="col-lg-2 order-1 mb-3 d-flex flex-column gap-2 mx-auto align-items-stretch">
-                <button name="1.1" class="btn btn-secondary btn-block" data-sql="SELECT DISTINCT * FROM departments" onClick="reply_click(this)">1.1</button>
-                <button name="1.2" class="btn btn-secondary btn-block"data-sql="SELECT emp_id, first_name, last_name FROM employees" onClick="reply_click(this)">1.2</button>
-                <button name="1.3" class="btn btn-secondary btn-block"data-sql="SELECT title from titles" onClick="reply_click(this)">1.3</button>
-                <button name="1.4" class="btn btn-secondary btn-block"data-sql="SELECT DISTINCT title from titles" onClick="reply_click(this)">1.4</button>
-                <button name="1.5" class="btn btn-secondary btn-block"data-sql="SELECT first_name, last_name FROM employees ORDER BY first_name ASC, last_name ASC" onClick="reply_click(this)">1.5</button>
+                <button name="2.1" class="btn btn-secondary btn-block" data-sql="SELECT dept_name FROM departments;" onClick="reply_click(this)">2.1</button>
+                <button name="2.2" class="btn btn-secondary btn-block"data-sql="SELECT COUNT(emp_id) AS total FROM employees;" onClick="reply_click(this)">2.2</button>
+                <button name="2.3" class="btn btn-secondary btn-block"data-sql="SELECT * FROM employees WHERE gender = 'F' ; " onClick="reply_click(this)">2.3</button>
+                <button name="2.4" class="btn btn-secondary btn-block"data-sql="SELECT * FROM employees WHERE last_name = 'Simmel' AND hire_date < '1986-01-01';" onClick="reply_click(this)">2.4</button>
+                <button name="2.5" class="btn btn-secondary btn-block"data-sql="SELECT COUNT(last_name) AS total_with_B FROM employees WHERE last_name LIKE '%B%';" onClick="reply_click(this)">2.5</button>
+                <button name="2.6" class="btn btn-secondary btn-block"data-sql="CREATE TABLE IF NOT EXISTS emp_training(trainer_n INT NOT NULL, first_name VARCHAR(30) NOT NULL, last_name VARCHAR(30) NOT NULL, t_module VARCHAR(20) NOT NULL, PRIMARY KEY(trainer_n));" onClick="reply_click(this)">2.6</button>
+                <button name="2.7.1" class="btn btn-secondary btn-block"data-sql="INSERT INTO emp_training(first_name, last_name, t_module) VALUES('Joe','Bloggs','Google Dogs');" onClick="reply_click(this)">2.7.1</button>
+                <button name="2.7.2" class="btn btn-secondary btn-block"data-sql="INSERT INTO emp_training(first_name, last_name, t_module) VALUES ('Fred','Bloggs','Google Sheets');" onClick="reply_click(this)">2.7.2</button>
+                <button name="2.8" class="btn btn-secondary btn-block"data-sql="DROP TABLE emp_training;" onClick="reply_click(this)">2.8</button>
+                <button name="2.9" class="btn btn-secondary btn-block"data-sql="ALTER TABLE employees ADD email_address VARCHAR(20) NOT NULL;" onClick="reply_click(this)">2.9</button>
+                <button name="2.10" class="btn btn-secondary btn-block"data-sql="UPDATE employees SET email_address = 'gfacello@gmail.com' WHERE emp_id ='10001';" onClick="reply_click(this)">2.10</button>
             </div>
             <div class="col-lg-10 order-2">
                 <textarea id="commands" class="col-lg-8 order-2 mb-5">
-DROP TABLE IF EXISTS employees;
-CREATE TABLE employees( id integer,  name text,
-                        designation text, manager integer,
-                        hired_on    date, salary  integer,
-                        commission  float,dept    integer);
-                
-INSERT INTO employees VALUES (1,'JOHNSON','ADMIN',6,'1990-12-17',18000,NULL,4);
-INSERT INTO employees VALUES (2,'HARDING','MANAGER',9,'1998-02-02',52000,300,3);
-INSERT INTO employees VALUES (3,'TAFT','SALES I',2,'1996-01-02',25000,500,3);
-INSERT INTO employees VALUES (4,'HOOVER','SALES I',2,'1990-04-02',27000,NULL,3);
-INSERT INTO employees VALUES (5,'LINCOLN','TECH',6,'1994-06-23',22500,1400,4);
-INSERT INTO employees VALUES (6,'GARFIELD','MANAGER',9,'1993-05-01',54000,NULL,4);
-INSERT INTO employees VALUES (7,'POLK','TECH',6,'1997-09-22',25000,NULL,4);
-INSERT INTO employees VALUES (8,'GRANT','ENGINEER',10,'1997-03-30',32000,NULL,2);
-INSERT INTO employees VALUES (9,'JACKSON','CEO',NULL,'1990-01-01',75000,NULL,4);
-INSERT INTO employees VALUES (10,'FILLMORE','MANAGER',9,'1994-08-09',56000,NULL,2);
-INSERT INTO employees VALUES (11,'ADAMS','ENGINEER',10,'1996-03-15',34000,NULL,2);
-INSERT INTO employees VALUES (12,'WASHINGTON','ADMIN',6,'1998-04-16',18000,NULL,4);
-INSERT INTO employees VALUES (13,'MONROE','ENGINEER',10,'2000-12-03',30000,NULL,2);
-INSERT INTO employees VALUES (14,'ROOSEVELT','CPA',9,'1995-10-12',35000,NULL,1);
 
-SELECT designation,COUNT(*) AS nbr, (AVG(salary)) AS avg_salary FROM employees GROUP BY designation ORDER BY avg_salary DESC;
-SELECT name,hired_on FROM employees ORDER BY hired_on;
                 </textarea>
                 <div class="d-grid gap-2 mt-2">
                 <button class="btn btn-primary" type="button" id="execute">Execute</button>
